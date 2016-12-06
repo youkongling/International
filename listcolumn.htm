@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>华东交通大学国际学院</title>
+    <meta charset="gb2312">
+    <meta name="keywords" content="华东交通大学国际学院">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="main.css" rel="stylesheet" type="text/css">
+   <script type="text/javascript">
+  window.onload=function(){
+    var wrap=document.getElementById('wrap'),
+        pic=document.getElementById('pic'),
+        list=document.getElementById('list').getElementsByTagName('li'),
+        index=0,
+        timer=null;
+
+      function auto(){
+        timer=setInterval(function(){
+          index++;
+          if(index>=list.length){
+            index=0;
+          }
+          change(index);
+        },4000);  
+      }
+      auto();
+
+      function change(curIndex){
+        pic.style.marginTop=-270*curIndex+'px';
+        for(var n=0;n<list.length;n++){
+            list[n].className='';
+        }
+          list[curIndex].className='on';
+          index=curIndex;
+       }
+       wrap.onmouseover=function(){
+          clearInterval(timer);
+       }
+       wrap.onmouseout=auto;
+       for(var i=0;i<list.length;i++){
+          list[i].id=i;
+          list[i].onmouseover=function(){
+            change(this.id);          
+          }
+        }
+
+   }
+
+  </script>	
+</head>
+<body>
+    
+    <div class="page_wrapper">
+      <!--顶部-->
+      <div class="header">
+      <div class="header_button">
+        <ul>
+          <li class="button_li">
+            <a href="#" class="button_a">中文</a>
+          </li>
+          <li class="button_li">
+            <a href="#" class="button_a">English</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  <!--导航栏-->
+      <div class="nav">
+          <div class="nav_wrapper">
+              <table align="center" border="0" cellspacing="0" cellpadding="0" class="nav_list">
+                  <tr>
+                      <td>[频道1]</td>
+                  </tr>
+              </table>
+          </div>
+      </div>
+  <!--轮播图-->
+     <!--  <div id="wrapper">
+        <div class="wrap" id='wrap'>
+          <ul id="pic">
+             <li><img src="images/no1.jpg" alt=""></li>
+            <li><img src="images/no2.jpg" alt=""></li>
+            <li><img src="images/no3.jpg" alt=""></li>
+            <li><img src="images/no4.JPG" alt=""></li>
+            <li><img src="images/no5.jpg" alt=""></li>
+            <ol id="list">
+              <li class="on"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ol>
+          </ul>
+        </div>
+      </div> -->
+      <!--文章列表-->
+      <div class="box2">
+        <div style="width:1000px;margin:0 auto;background:white;min-height:380px;height:auto;">
+          <!-- <div id="sidebar_left">
+          <br>
+          <h3 style="color:black;">导航</h3><hr color="white" style="border-bottom:1px dashed #dfdfdf;"/>
+          <table width="80%" border="0" cellpadding="0" cellspacing="1" style="margin-left:10px;">
+            <tr>
+              <td><img src="images/arrow2.gif" width="8" height="9"></td>
+              <td align="left" class="side_left">[栏目列表]</td>
+            </tr>
+          </table>
+          </div> -->
+
+          <div id="mid">
+            <table width="100%"  border="0" cellpadding="0" cellspacing="0" class="p9">
+              <tr>
+                <td height="25" background="images/position_bg.gif">&nbsp;&nbsp;[当前位置]</td>
+              </tr>
+            </table>
+            <br>
+          <h3 style="color:black;">[栏目名称]</h3><hr color="white" style="border-bottom:1px dashed #dfdfdf;margin-bottom:5px;"/>
+          <div style="padding:10px;position:relative;min-height:250px;">
+            <table id="table_1">
+              <tr>
+                <td width="16" valign="top" class="main_shadow"><img src="images/jiantou.jpg" width="10" height="10"></td>
+                <td class="p_list">[文章列表]</td>
+              </tr>
+            </table></div>
+          </div>
+
+
+          </div>
+
+
+          </div>
+          <div style="clear:both;"></div> 
+      
+
+      <!--底部-->
+    <div class="footer">
+
+        <div class="footer_content">  
+          <span class="foot_word" >地址：<a href="http://map.baidu.com/?newmap=1&s=con%26wd%3D%E5%8D%8E%E4%B8%9C%E4%BA%A4%E5%A4%A7%26c%3D163&from=alamap&tpl=mapdots" class="foot_c">江西省南昌市经济技术开发区双港东大街808号</a></span>
+            <span class="foot_word">邮编：330013 联系电话：0791-87045366 邮箱：hdgjxy@ecjtu.edu.cn</span>
+        </div>
+        
+    </div>
+
+    </div>
+
+</body>
+</html>
